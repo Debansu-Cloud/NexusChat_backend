@@ -54,6 +54,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello world</h1>');
 });
 
-server.listen(4600, () => {
-  console.log('server running at http://localhost:4600');
+const PORT = process.env.PORT || 4600;
+server.listen(PORT, () => {
+  console.log(`server running at port ${PORT}`);
 });
